@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Article or Text evaluation!</title>
+    </head>
+
+    <body id = "container">
+        <header>
+            <h1>Interpreting Texts</h1>
+        </header>
+        <main>
+            <section>
+                <form class="" onsubmit="return Client.handleSubmit(event)">
+                    <h2>Please insert appropriate article OR text! Then indicate which you have inserted.</h2>
+                    <br>
+                    <input id="submission" type="text" name="input-url" value="" placeholder="Article Link or Text">
+                    <br>
+                    <div id="radio-buttons">
+                        <input type= "radio" id = "text" value = "text" name = "submit"><label id= "text-label" for="text">Text</label>
+                        <input type= "radio" id = "url" value = "url" name = "submit"><label id ="url-label" for = "url">Url</label>
+                        <br>
+                        <input type="submit" name="" value="Submit" onsubmit="return Client.handleSubmit(event)">
+                    </div>
+                </form>
+            </section>
+
+            <section id="results-section">
+                <h2><strong>Form Results:</strong></h2>
+                <div id="results"></div>
+            </section>
+        </main>
+        <footer>
+            <p>Some code was borrowed from other developers! Thanks!</p>
+        </footer>
+        <script>
+            if ('serviceWorker' in navigator) {
+                window.addEventListener('load', () => {
+                    navigator.serviceWorker.register('/service-worker.js');
+                });
+            }
+        </script>
+    </body>
+</html>
