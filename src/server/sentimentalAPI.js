@@ -11,7 +11,6 @@ const getAPIData = async(api, submission) => {
         })
         try{
             let data = await response.json()
-            console.log(data);
             return(data);
         }catch(error){
             console.log("error", error);
@@ -25,7 +24,6 @@ const getAPIData = async(api, submission) => {
         });
         try{
             let data = await response.json()
-            console.log(data);
             return(data);
         }catch(error){
             console.log("error", error);
